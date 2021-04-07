@@ -49,7 +49,7 @@ int main(int argc, char *argv[2])
    }
      FILE *fptr;
      fptr = fopen(argv[2], "w");
-     fputc('v', fptr);
+    
      Read(argv[1],argv[2]);
    fclose(fptr);
    return 0;
@@ -78,19 +78,17 @@ void Read(char *html,char *output_file){
      fclose(rptr);
 }
 
-
-
 void Write(char *output,char *output_file){
      char tags[10][8] = {"</html>", "</title>", "</body>","</h1>","</h2>","</h3>","</h4>","</h5>","</h6>","</p>"} ;
      for (int i=0;i<10;i++){
                if(strstr(output,tags[i])){
                output=replaceWord(output,tags[i]," ");
+               output=replaceWord(output,"<","");
+               output=replaceWord(output,">","");
+               output=replaceWord(output,"/","");
           }
      }
-     // output=replaceWord(output,"<","");
-     // output=replaceWord(output,">","");
-     // output=replaceWord(output,"/","");
-     // output=replaceWord(output,"  ","");
+
      int i;
         FILE * wptr;
         char fn[50];
@@ -100,7 +98,6 @@ void Write(char *output,char *output_file){
             /* write to file using fputc() function */
             fputc(output[i], wptr);
             }
-
-printf(output);
- fclose(wptr);
+     printf(output);
+     fclose(wptr);
 }

@@ -1,7 +1,7 @@
-v
+ 
   First Heading of document  
  
-  Second Heading <b> </b> of document  
+  Second Heading b b of document  
  
   Paragraph text in document  
  
