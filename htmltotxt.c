@@ -36,7 +36,6 @@ void read(char *html){
                if(strstr(data,tags[i]))
                printf(" \n %s",strstr(data,tags[i]));
                }
-               //printf(" \n %s", data);
           }
 
      fclose(rptr);
