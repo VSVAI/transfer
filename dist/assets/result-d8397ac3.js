@@ -1,0 +1,1 @@
+import{d as t,a,f as n,w as o,j as s,C as c}from"./app-7b3f8cee.js";const p=t({__name:"result",setup(_){return(r,f)=>{const e=c;return a(),n(e,{hide:!1},{default:o(()=>[s(" hello ")]),_:1})}}});export{p as default};
